@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
+import 'package:vexana/src/interface/INetworkModel.dart';
+import 'package:vexana/src/interface/INetworkService.dart';
 
 import '../../../../core/base/viewmodel/base_view_model.dart';
 import '../../../../core/constants/enums/preferences_keys_enum.dart';
@@ -38,7 +40,7 @@ abstract class _LoginViewModelBase with Store, BaseViewModel {
 
   @override
   void init() {
-    loginService = LoginService(vexanaManager!.networkManager, scaffoldKey);
+   
     studentEmailController = TextEditingController();
     teacherEmailController = TextEditingController();
     studentPasswordController = TextEditingController();

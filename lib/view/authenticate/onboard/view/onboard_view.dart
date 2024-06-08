@@ -102,7 +102,7 @@ class OnBoardView extends StatelessWidget {
   AutoLocaleText buildAutoLocaleTextTitle(OnBoardModel model, BuildContext context) {
     return AutoLocaleText(
       value: model.title,
-      style: Theme.of(context).textTheme.headline4!,
+      // style: Theme.of(context).textTheme.headline4!,
     );
   }
 
@@ -110,7 +110,7 @@ class OnBoardView extends StatelessWidget {
     return AutoLocaleText(
       value: model.description,
       textAlign: TextAlign.center,
-      style: Theme.of(context).textTheme.subtitle1!,
+      // style: Theme.of(context).textTheme.subtitle1!,
     );
   }
 

@@ -16,14 +16,14 @@ class VexanaManager {
 
   VexanaManager._init();
 
-  INetworkManager networkManager = NetworkManager(
-    isEnableLogger: true,
-    fileManager: LocalFile(),
-    options: BaseOptions(
-        baseUrl: Platform.isAndroid ? _androidBaseUrl : _iosBaseUrl,
-        receiveDataWhenStatusError: true,
-        connectTimeout: 30000,
-        receiveTimeout: 30000,
-        followRedirects: false),
-  );
+  // INetworkManager networkManager = NetworkManager(
+  //   isEnableLogger: true,
+  //   fileManager: LocalFile(),
+  //   options: BaseOptions(
+  //       baseUrl: Platform.isAndroid ? _androidBaseUrl : _iosBaseUrl,
+  //       receiveDataWhenStatusError: true,
+        // connectTimeout: int.parse(30000),
+        // receiveTimeout: 30000,
+  //       followRedirects: false),
+  // );
 }

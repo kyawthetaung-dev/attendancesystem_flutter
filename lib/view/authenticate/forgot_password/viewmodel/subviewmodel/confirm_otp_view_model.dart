@@ -32,7 +32,7 @@ abstract class _ConfirmOtpViewModelBase with Store, BaseViewModel {
 
   @override
   void init() {
-    forgotPasswordService = ForgotPasswordService(vexanaManager!.networkManager, scaffoldKey);
+    
     focusNode = FocusNode();
   }
 

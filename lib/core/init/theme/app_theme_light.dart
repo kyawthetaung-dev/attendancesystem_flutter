@@ -15,7 +15,6 @@ class AppThemeLight extends AppTheme with LightThemeInterface {
   ThemeData get theme => ThemeData(
         fontFamily: ApplicationConstants.FONT_FAMILY,
         appBarTheme: appBarTheme,
-        colorScheme: _appColorScheme,
         textTheme: textTheme,
         tabBarTheme: tabBarTheme,
         dialogTheme: dialogTheme,
@@ -26,19 +25,17 @@ class AppThemeLight extends AppTheme with LightThemeInterface {
         dividerColor: colorSchemeLight!.white,
         scaffoldBackgroundColor: colorSchemeLight!.lightGray,
         canvasColor: colorSchemeLight!.lightGray,
-        errorColor: colorSchemeLight!.red,
+        hoverColor: colorSchemeLight!.red,
         hintColor: colorSchemeLight!.black,
         indicatorColor: colorSchemeLight!.lightBlue,
         dialogBackgroundColor: colorSchemeLight!.white,
-        backgroundColor: colorSchemeLight!.lightBlue,
         disabledColor: colorSchemeLight!.black,
         cardColor: colorSchemeLight!.white,
         primaryColor: colorSchemeLight!.lightBlue,
-        primarySwatch: Colors.lightBlue,
         textButtonTheme: textButtonTheme,
         elevatedButtonTheme: elevatedButtonTheme,
         outlinedButtonTheme: outlinedButtonTheme,
-        floatingActionButtonTheme: floatingActionButtonTheme,
+        floatingActionButtonTheme: floatingActionButtonTheme, colorScheme: _appColorScheme.copyWith(surface: colorSchemeLight!.lightBlue),
       );
 
   TabBarTheme get tabBarTheme {
@@ -191,8 +188,7 @@ class AppThemeLight extends AppTheme with LightThemeInterface {
   TextButtonThemeData get textButtonTheme {
     return TextButtonThemeData(
       style: TextButton.styleFrom(
-        primary: colorSchemeLight!.blue,
-        onSurface: colorSchemeLight!.white,
+        foregroundColor: colorSchemeLight!.blue, disabledForegroundColor: colorSchemeLight!.white.withOpacity(0.38),
         backgroundColor: colorSchemeLight!.blue,
         padding: insets.lowPaddingAll,
         shadowColor: colorSchemeLight!.black,
@@ -211,9 +207,7 @@ class AppThemeLight extends AppTheme with LightThemeInterface {
   ElevatedButtonThemeData get elevatedButtonTheme {
     return ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
-        primary: colorSchemeLight!.blue, // Button Bg Color
-        onPrimary: colorSchemeLight!.white, // Button text Color
-        onSurface: colorSchemeLight!.black,
+        foregroundColor: colorSchemeLight!.white, backgroundColor: colorSchemeLight!.blue, disabledForegroundColor: colorSchemeLight!.black.withOpacity(0.38), disabledBackgroundColor: colorSchemeLight!.black.withOpacity(0.12),
         shadowColor: colorSchemeLight!.black,
         padding: insets.mediumPaddingAll,
         alignment: Alignment.center,
@@ -228,8 +222,7 @@ class AppThemeLight extends AppTheme with LightThemeInterface {
   OutlinedButtonThemeData get outlinedButtonTheme {
     return OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        primary: colorSchemeLight!.blue,
-        onSurface: colorSchemeLight!.white,
+        foregroundColor: colorSchemeLight!.blue, disabledForegroundColor: colorSchemeLight!.white.withOpacity(0.38),
         backgroundColor: colorSchemeLight!.blue,
         shadowColor: colorSchemeLight!.black,
         padding: insets.mediumPaddingAll,
@@ -269,8 +262,8 @@ class AppThemeLight extends AppTheme with LightThemeInterface {
       ),
       actionsIconTheme: IconThemeData(color: colorSchemeLight!.black),
       centerTitle: true,
-      toolbarTextStyle: textTheme.headline6!.copyWith(color: colorSchemeLight!.black),
-      titleTextStyle: textTheme.headline6!.copyWith(color: colorSchemeLight!.black),
+      toolbarTextStyle: textTheme.titleLarge!.copyWith(color: colorSchemeLight!.black),
+      titleTextStyle: textTheme.titleLarge!.copyWith(color: colorSchemeLight!.black),
     );
   }
 
@@ -333,19 +326,19 @@ class AppThemeLight extends AppTheme with LightThemeInterface {
 
   TextTheme get textTheme {
     return TextTheme(
-        headline1: textThemeLight!.headline1,
-        headline2: textThemeLight!.headline2,
-        headline3: textThemeLight!.headline3,
-        headline4: textThemeLight!.headline4,
-        headline5: textThemeLight!.headline5,
-        headline6: textThemeLight!.headline6,
-        subtitle1: textThemeLight!.subtitle1,
-        subtitle2: textThemeLight!.subtitle2,
-        bodyText1: textThemeLight!.bodyText1,
-        bodyText2: textThemeLight!.bodyText2,
-        button: textThemeLight!.button,
-        caption: textThemeLight!.caption,
-        overline: textThemeLight!.overline);
+        displayMedium: textThemeLight!.headline1,
+        displayLarge: textThemeLight!.headline2,
+        displaySmall: textThemeLight!.headline3,
+        headlineMedium: textThemeLight!.headline4,
+        headlineSmall: textThemeLight!.headline5,
+        titleLarge: textThemeLight!.headline6,
+        titleMedium: textThemeLight!.subtitle1,
+        titleSmall: textThemeLight!.subtitle2,
+        bodyLarge: textThemeLight!.bodyText1,
+        bodyMedium: textThemeLight!.bodyText2,
+        labelLarge: textThemeLight!.button,
+        bodySmall: textThemeLight!.caption,
+        labelSmall: textThemeLight!.overline);
   }
 
   ColorScheme get _appColorScheme {

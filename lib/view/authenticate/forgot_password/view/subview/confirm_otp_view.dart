@@ -69,7 +69,7 @@ class ConfirmOtpView extends StatelessWidget {
                   LocaleKeys.confirmotp_expired.tr() +
                       time.toInt().toString() +
                       LocaleKeys.confirmotp_second.tr(),
-                  style: context.textTheme.subtitle1),
+                  style: context.textTheme.titleMedium),
               interval: const Duration(seconds: 1),
               onFinished: () {
                 viewModel.sendToLoginView();
@@ -94,12 +94,12 @@ class ConfirmOtpView extends StatelessWidget {
                 text: LocaleKeys.confirmotp_title.tr(),
                 style: Theme.of(context)
                     .textTheme
-                    .headline6!
+                    .titleLarge!
                     .copyWith(fontWeight: FontWeight.bold, color: context.colors.onPrimary),
               ),
               TextSpan(
                 text: LocaleKeys.confirmotp_desc.tr(),
-                style: Theme.of(context).textTheme.subtitle1!,
+                style: Theme.of(context).textTheme.titleMedium!,
               )
             ],
           ),
@@ -116,7 +116,7 @@ class ConfirmOtpView extends StatelessWidget {
             text: LocaleKeys.confirmotp_receive.tr(),
             style: Theme.of(context)
                 .textTheme
-                .bodyText2!
+                .bodyMedium!
                 .copyWith(fontWeight: FontWeight.w400, color: context.colors.onSecondary),
             children: [
               TextSpan(
@@ -126,7 +126,7 @@ class ConfirmOtpView extends StatelessWidget {
                       viewModel.fetchResendOtpCodeToEmail(context, email.toString(), typeOfUser),
                 style: Theme.of(context)
                     .textTheme
-                    .bodyText2!
+                    .bodyMedium!
                     .copyWith(fontWeight: FontWeight.w400, color: context.colorSchemeLight.blue),
               )
             ]),
@@ -143,13 +143,11 @@ class ConfirmOtpView extends StatelessWidget {
                   viewModel.fetchConfirmOtpCode(viewModel.currentText.toString(), typeOfUser);
                 },
           style: ElevatedButton.styleFrom(
-            shape: const StadiumBorder(),
-            primary: context.colorSchemeLight.blue,
-            onPrimary: context.colors.primaryContainer,
+            foregroundColor: context.colors.primaryContainer, shape: const StadiumBorder(), backgroundColor: context.colorSchemeLight.blue,
           ),
           child: Center(
               child: Text(LocaleKeys.confirmotp_confirm.tr(),
-                  style: context.textTheme.headline6!
+                  style: context.textTheme.titleLarge!
                       .copyWith(color: context.colorSchemeLight.white))));
     });
   }

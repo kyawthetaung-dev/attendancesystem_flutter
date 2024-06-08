@@ -102,9 +102,11 @@ class AttendanceView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(LocaleKeys.course_teacher_attendance_absent.tr(),
-            style: context.textTheme.subtitle2!.copyWith(color: context.colorSchemeLight.red)),
+            // style: context.textTheme.subtitle2!.copyWith(color: context.colorSchemeLight.red)
+            ),
         Text(viewModel.manageAttendanceModels!.absentStudent!,
-            style: context.textTheme.bodyText2!.copyWith(color: context.colorSchemeLight.red))
+            // style: context.textTheme.bodyText2!.copyWith(color: context.colorSchemeLight.red)
+            )
       ],
     );
   }
@@ -116,9 +118,11 @@ class AttendanceView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(LocaleKeys.course_teacher_attendance_participants.tr(),
-            style: context.textTheme.subtitle2!.copyWith(color: context.colorSchemeLight.green)),
+            // style: context.textTheme.subtitle2!.copyWith(color: context.colorSchemeLight.green)
+            ),
         Text(viewModel.manageAttendanceModels!.participateStudent!,
-            style: context.textTheme.bodyText2!.copyWith(color: context.colorSchemeLight.green))
+            // style: context.textTheme.bodyText2!.copyWith(color: context.colorSchemeLight.green)
+            )
       ],
     );
   }
@@ -129,9 +133,11 @@ class AttendanceView extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text(LocaleKeys.course_teacher_attendance_tot.tr(),
-            style: context.textTheme.subtitle2!.copyWith(color: context.colorSchemeLight.blue)),
+            // style: context.textTheme.subtitle2!.copyWith(color: context.colorSchemeLight.blue)
+            ),
         Text(viewModel.manageAttendanceModels!.totalStudent!,
-            style: context.textTheme.bodyText2!.copyWith(color: context.colorSchemeLight.blue))
+            // style: context.textTheme.bodyText2!.copyWith(color: context.colorSchemeLight.blue)
+            )
       ],
     );
   }

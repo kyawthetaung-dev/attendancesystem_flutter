@@ -86,14 +86,14 @@ class ForgotPasswordView extends StatelessWidget {
             children: [
               TextSpan(
                 text: LocaleKeys.forgotpassword_title.tr(),
-                style: Theme.of(context)
-                    .textTheme
-                    .headline6!
-                    .copyWith(fontWeight: FontWeight.bold, color: context.colors.onPrimary),
+                // style: Theme.of(context)
+                //     .textTheme
+                //     .headline6!
+                //     .copyWith(fontWeight: FontWeight.bold, color: context.colors.onPrimary),
               ),
               TextSpan(
                 text: LocaleKeys.forgotpassword_desc.tr(),
-                style: Theme.of(context).textTheme.subtitle1!,
+                // style: Theme.of(context).textTheme.subtitle1!,
               )
             ],
           ),
@@ -111,14 +111,13 @@ class ForgotPasswordView extends StatelessWidget {
                   viewModel.fetchSendOtpCodeToEmail(typeOfUser);
                 },
           style: ElevatedButton.styleFrom(
-            shape: const StadiumBorder(),
-            primary: context.colorSchemeLight.blue,
-            onPrimary: context.colors.primaryContainer,
+            foregroundColor: context.colors.primaryContainer, backgroundColor: context.colorSchemeLight.blue, shape: const StadiumBorder(),
           ),
           child: Center(
               child: Text(LocaleKeys.forgotpassword_send.tr(),
-                  style: context.textTheme.headline6!
-                      .copyWith(color: context.colorSchemeLight.white))));
+                  // style: context.textTheme.headline6!
+                  //     .copyWith(color: context.colorSchemeLight.white)
+                      )));
     });
   }
 }

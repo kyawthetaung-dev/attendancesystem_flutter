@@ -97,13 +97,11 @@ class CourseDetailSettingsView extends StatelessWidget {
             viewModel.updateCourse(courseId, typeOfUser);
           },
           style: ElevatedButton.styleFrom(
-            shape: const StadiumBorder(),
-            primary: context.colorSchemeLight.blue,
-            onPrimary: context.colors.primaryContainer,
+            foregroundColor: context.colors.primaryContainer, backgroundColor: context.colorSchemeLight.blue, shape: const StadiumBorder(),
           ),
           child: Center(
               child: Text(LocaleKeys.course_teacher_settings_button.tr(),
-                  style: context.theme.textTheme.subtitle1!
+                  style: context.theme.textTheme.titleMedium!
                       .copyWith(color: context.colorSchemeLight.white))));
     });
   }

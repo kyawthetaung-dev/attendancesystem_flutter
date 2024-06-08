@@ -63,7 +63,7 @@ abstract class _CourseViewModelBase with Store, BaseViewModel {
   @override
   void init() {
     helper = DecorationHelper(context: baseContext);
-    courseService = CourseService(vexanaManager!.networkManager, scaffoldKey);
+    // courseService = CourseService(vexanaManager!.networkManager, scaffoldKey);
     courseCodeController = TextEditingController();
     courseShortNameController = TextEditingController();
     courseNameController = TextEditingController();

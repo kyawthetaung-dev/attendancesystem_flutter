@@ -83,7 +83,6 @@ class StudentManageAttendanceCard extends StatelessWidget {
   Text buildFullNameText(BuildContext context) {
     return Text(
       courseDetailViewModel.courseDetailModel!.students![index].fullName!,
-      style: Theme.of(context).textTheme.bodyText2!,
     );
   }
 

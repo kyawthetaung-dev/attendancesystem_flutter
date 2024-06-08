@@ -25,7 +25,7 @@ class OtpPinCodeTextField extends StatelessWidget {
       pinTheme: buildPinCodeTheme(context),
       cursorColor: context.theme.colorScheme.onSecondary,
       animationDuration: const Duration(milliseconds: 300),
-      textStyle: context.textTheme.headline6,
+      // textStyle: context.textTheme.headline6,
       backgroundColor: context.theme.scaffoldBackgroundColor,
       enableActiveFill: true,
       controller: viewModel.otpCodeController,

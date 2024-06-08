@@ -24,7 +24,8 @@ class UploadImageDialog extends StatelessWidget {
       WidgetSpan(child: Icon(Icons.warning_amber_rounded, color: context.colorSchemeLight.yellow)),
       TextSpan(
           text: LocaleKeys.course_student_alert_title.tr(),
-          style: Theme.of(context).textTheme.bodyText1!)
+          // style: Theme.of(context).textTheme.bodyText1!
+          )
     ]));
   }
 
@@ -32,7 +33,8 @@ class UploadImageDialog extends StatelessWidget {
     return Padding(
       padding: context.paddingLow,
       child: Text(LocaleKeys.course_student_alert_desc.tr(),
-          style: Theme.of(context).textTheme.bodyText2!),
+          // style: Theme.of(context).textTheme.bodyText2!
+          ),
     );
   }
 
@@ -45,7 +47,8 @@ class UploadImageDialog extends StatelessWidget {
           TextButton(
               onPressed: onPressed,
               child: Text(LocaleKeys.course_student_alert_button.tr(),
-                  textAlign: TextAlign.center, style: context.textTheme.bodyText2!)),
+                  // textAlign: TextAlign.center, style: context.textTheme.bodyText2!
+                  )),
         ],
       ),
     );

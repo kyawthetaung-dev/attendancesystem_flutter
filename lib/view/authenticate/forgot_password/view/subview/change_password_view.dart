@@ -110,12 +110,12 @@ class ChangePasswordView extends StatelessWidget {
                 text: LocaleKeys.changepassword_title.tr(),
                 style: Theme.of(context)
                     .textTheme
-                    .headline6!
+                    .titleLarge!
                     .copyWith(fontWeight: FontWeight.bold, color: context.colors.onPrimary),
               ),
               TextSpan(
                   text: LocaleKeys.changepassword_desc.tr(),
-                  style: Theme.of(context).textTheme.subtitle1!)
+                  style: Theme.of(context).textTheme.titleMedium!)
             ],
           ),
           textAlign: TextAlign.center),
@@ -131,13 +131,11 @@ class ChangePasswordView extends StatelessWidget {
                   viewModel.fetchConfirmChangePassword(context, otpCode, typeOfUser);
                 },
           style: ElevatedButton.styleFrom(
-            shape: const StadiumBorder(),
-            primary: context.colorSchemeLight.blue,
-            onPrimary: context.colors.primaryContainer,
+            foregroundColor: context.colors.primaryContainer, backgroundColor: context.colorSchemeLight.blue, shape: const StadiumBorder(),
           ),
           child: Center(
               child: Text(LocaleKeys.changepassword_confirm.tr(),
-                  style: context.textTheme.headline6!
+                  style: context.textTheme.titleLarge!
                       .copyWith(color: context.colorSchemeLight.white))));
     });
   }

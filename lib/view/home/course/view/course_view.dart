@@ -152,7 +152,9 @@ class CourseView extends StatelessWidget {
       child: Column(
         children: <Widget>[
           context.emptySizedHeightBoxLow3x,
-          Text(LocaleKeys.course_student_title.tr(), style: Theme.of(context).textTheme.subtitle1!),
+          Text(LocaleKeys.course_student_title.tr(), 
+          // style: Theme.of(context).textTheme.subtitle1!
+          ),
           context.emptySizedHeightBoxLow3x,
           buildTextFormFieldCourseCode(viewModel, context),
           context.emptySizedHeightBoxLow3x,
@@ -171,7 +173,9 @@ class CourseView extends StatelessWidget {
       child: Column(
         children: <Widget>[
           context.emptySizedHeightBoxLow3x,
-          Text(LocaleKeys.course_teacher_title.tr(), style: Theme.of(context).textTheme.subtitle1!),
+          Text(LocaleKeys.course_teacher_title.tr(), 
+          // style: Theme.of(context).textTheme.subtitle1!
+          ),
           buildTextFormFieldCourseName(viewModel),
           context.emptySizedHeightBoxLow3x,
           buildTextFormFieldCourseShortName(viewModel),
@@ -217,13 +221,12 @@ class CourseView extends StatelessWidget {
             viewModel.floatingButtonControl(context, typeOfUser);
           },
           style: ElevatedButton.styleFrom(
-            shape: const StadiumBorder(),
-            primary: Colors.blue,
-            onPrimary: context.appTheme.colorScheme.primaryContainer,
+            foregroundColor: context.appTheme.colorScheme.primaryContainer, backgroundColor: Colors.blue, shape: const StadiumBorder(),
           ),
           child: Center(
               child: Text(LocaleKeys.course_student_button.tr(),
-                  style: context.textTheme.subtitle1!.copyWith(color: Colors.white))));
+                  // style: context.textTheme.subtitle1!.copyWith(color: Colors.white)
+                  )));
     });
   }
 
@@ -234,13 +237,12 @@ class CourseView extends StatelessWidget {
             viewModel.floatingButtonControl(context, typeOfUser);
           },
           style: ElevatedButton.styleFrom(
-            shape: const StadiumBorder(),
-            primary: Colors.blue,
-            onPrimary: context.appTheme.colorScheme.primaryContainer,
+            foregroundColor: context.appTheme.colorScheme.primaryContainer, backgroundColor: Colors.blue, shape: const StadiumBorder(),
           ),
           child: Center(
               child: Text(LocaleKeys.course_teacher_button.tr(),
-                  style: context.textTheme.subtitle1!.copyWith(color: Colors.white))));
+                  // style: context.textTheme.subtitle1!.copyWith(color: Colors.white)
+                  )));
     });
   }
 
@@ -252,13 +254,16 @@ class CourseView extends StatelessWidget {
             children: [
               TextSpan(
                   text: '${LocaleKeys.course_student_desc_title.tr()}\n\n',
-                  style: Theme.of(context).textTheme.subtitle1!),
+                  // style: Theme.of(context).textTheme.subtitle1!
+                  ),
               TextSpan(
                   text: '${LocaleKeys.course_student_desc_desc1.tr()}\n',
-                  style: Theme.of(context).textTheme.subtitle2!),
+                  // style: Theme.of(context).textTheme.subtitle2!
+                  ),
               TextSpan(
                   text: LocaleKeys.course_student_desc_desc2.tr(),
-                  style: Theme.of(context).textTheme.subtitle2!)
+                  // style: Theme.of(context).textTheme.subtitle2!
+                  )
             ],
           ),
           textAlign: TextAlign.left),
@@ -273,10 +278,12 @@ class CourseView extends StatelessWidget {
             children: [
               TextSpan(
                   text: '${LocaleKeys.course_teacher_desc_title.tr()}\n\n',
-                  style: Theme.of(context).textTheme.subtitle1!),
+                  // style: Theme.of(context).textTheme.subtitle1!
+                  ),
               TextSpan(
                   text: LocaleKeys.course_teacher_desc_desc1.tr(),
-                  style: Theme.of(context).textTheme.subtitle2!)
+                  // style: Theme.of(context).textTheme.subtitle2!
+                  )
             ],
           ),
           textAlign: TextAlign.left),

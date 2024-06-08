@@ -78,7 +78,7 @@ abstract class _CourseDetailViewModelBase with Store, BaseViewModel {
   @override
   void init() {
     helper = DecorationHelper(context: baseContext);
-    courseService = CourseService(vexanaManager!.networkManager, detailScaffoldKey);
+    // courseService = CourseService(vexanaManager!.networkManager, detailScaffoldKey);
     courseStartDateController = TextEditingController();
     courseEndDateController = TextEditingController();
     courseStartTimeController = TextEditingController();

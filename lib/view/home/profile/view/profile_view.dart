@@ -78,7 +78,7 @@ class ProfileView extends StatelessWidget {
         children: [
           Text(
             LocaleKeys.profile_account_title.tr(),
-            style: context.textTheme.subtitle1!.copyWith(fontWeight: FontWeight.w600),
+            style: context.textTheme.titleMedium!.copyWith(fontWeight: FontWeight.w600),
           ),
           Divider(color: ColorSchemeLight.instance!.black),
           Card(
@@ -201,19 +201,19 @@ class ProfileView extends StatelessWidget {
                     typeOfUser == 'teacher'
                         ? TextSpan(
                             text: viewModel.teacherModel!.fullName,
-                            style: context.textTheme.subtitle1!)
+                            style: context.textTheme.titleMedium!)
                         : TextSpan(
                             text: viewModel.studentModel!.fullName,
-                            style: context.textTheme.subtitle1!),
+                            style: context.textTheme.titleMedium!),
                   ])),
                   Text.rich(TextSpan(children: [
                     typeOfUser == 'teacher'
                         ? TextSpan(
                             text: viewModel.teacherModel!.email,
-                            style: context.appTheme.textTheme.subtitle2!)
+                            style: context.appTheme.textTheme.titleSmall!)
                         : TextSpan(
                             text: viewModel.studentModel!.email,
-                            style: context.textTheme.subtitle2!),
+                            style: context.textTheme.titleSmall!),
                   ])),
                 ],
               ),
@@ -235,7 +235,7 @@ class ProfileView extends StatelessWidget {
         children: <Widget>[
           context.emptySizedHeightBoxNormal,
           Text(LocaleKeys.profile_account_fullName.tr(),
-              style: Theme.of(context).textTheme.subtitle1!),
+              style: Theme.of(context).textTheme.titleMedium!),
           context.emptySizedHeightBoxNormal,
           buildTextFormFieldFullName(viewModel),
           context.emptySizedHeightBoxNormal,
@@ -255,7 +255,7 @@ class ProfileView extends StatelessWidget {
         children: <Widget>[
           context.emptySizedHeightBoxNormal,
           Text(LocaleKeys.changepassword_password.tr(),
-              style: Theme.of(context).textTheme.subtitle1!),
+              style: Theme.of(context).textTheme.titleMedium!),
           context.emptySizedHeightBoxNormal,
           buildTextFormFieldPassword(viewModel),
           context.emptySizedHeightBoxNormal,
@@ -312,12 +312,12 @@ class ProfileView extends StatelessWidget {
                 text: LocaleKeys.profile_account_passwordTitle.tr(),
                 style: Theme.of(context)
                     .textTheme
-                    .headline6!
+                    .titleLarge!
                     .copyWith(fontWeight: FontWeight.bold, color: context.colorScheme.onPrimary),
               ),
               TextSpan(
                 text: LocaleKeys.profile_account_passwordDesc.tr(),
-                style: Theme.of(context).textTheme.subtitle1!,
+                style: Theme.of(context).textTheme.titleMedium!,
               )
             ],
           ),
@@ -335,12 +335,12 @@ class ProfileView extends StatelessWidget {
                 text: LocaleKeys.profile_account_fullNameTitle.tr(),
                 style: Theme.of(context)
                     .textTheme
-                    .headline6!
+                    .titleLarge!
                     .copyWith(fontWeight: FontWeight.bold, color: context.colorScheme.onPrimary),
               ),
               TextSpan(
                 text: LocaleKeys.profile_account_fullNameDesc.tr(),
-                style: Theme.of(context).textTheme.subtitle1!,
+                style: Theme.of(context).textTheme.titleMedium!,
               )
             ],
           ),
@@ -357,13 +357,11 @@ class ProfileView extends StatelessWidget {
                   viewModel.changePassword(context, typeOfUser);
                 },
           style: ElevatedButton.styleFrom(
-            shape: const StadiumBorder(),
-            primary: ColorSchemeLight.instance!.blue,
-            onPrimary: context.colorScheme.primaryContainer,
+            foregroundColor: context.colorScheme.primaryContainer, shape: const StadiumBorder(), backgroundColor: ColorSchemeLight.instance!.blue,
           ),
           child: Center(
               child: Text(LocaleKeys.profile_account_button.tr(),
-                  style: context.textTheme.subtitle1!
+                  style: context.textTheme.titleMedium!
                       .copyWith(color: ColorSchemeLight.instance!.white))));
     });
   }
@@ -379,13 +377,11 @@ class ProfileView extends StatelessWidget {
                       : viewModel.updateStudentFullName(typeOfUser);
                 },
           style: ElevatedButton.styleFrom(
-            shape: const StadiumBorder(),
-            primary: ColorSchemeLight.instance!.blue,
-            onPrimary: context.colorScheme.primaryContainer,
+            foregroundColor: context.colorScheme.primaryContainer, backgroundColor: ColorSchemeLight.instance!.blue, shape: const StadiumBorder(),
           ),
           child: Center(
               child: Text(LocaleKeys.profile_account_button.tr(),
-                  style: context.textTheme.subtitle1!
+                  style: context.textTheme.titleMedium!
                       .copyWith(color: ColorSchemeLight.instance!.white))));
     });
   }

@@ -55,21 +55,18 @@ class CourseListCard extends StatelessWidget {
       children: [
         Expanded(
           flex: 2,
-          child: Text(courseList[itemIndex].courseShortName!,
-              style: Theme.of(context).textTheme.headline6!),
+          child: Text(courseList[itemIndex].courseShortName!),
         ),
         const Spacer(flex: 1),
         Expanded(
           flex: 2,
-          child: Text(courseList[itemIndex].courseName!,
-              style: Theme.of(context).textTheme.subtitle1!),
+          child: Text(courseList[itemIndex].courseName!,),
         ),
         const Spacer(flex: 3),
         Expanded(
           flex: 2,
           child: Text(
-              '${LocaleKeys.course_teacher_teacher.tr()} : ${courseList[itemIndex].teacher!.fullName!}',
-              style: Theme.of(context).textTheme.subtitle1!),
+              '${LocaleKeys.course_teacher_teacher.tr()} : ${courseList[itemIndex].teacher!.fullName!}',),
         ),
       ],
     );

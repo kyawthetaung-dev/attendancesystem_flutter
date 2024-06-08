@@ -48,13 +48,13 @@ class SettingsView extends StatelessWidget {
         children: [
           SizedBox(height: context.height * 0.02),
           Text(LocaleKeys.setting_appSettings_title.tr(),
-              style: context.textTheme.headline6!.copyWith(fontWeight: FontWeight.w600)),
+              style: context.textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w600)),
           Divider(color: context.colorScheme.onSecondary),
           buildChangeThemeCard(context, viewModel),
           buildChangeLanguageCard(context, viewModel),
           context.emptySizedHeightBoxLow,
           Text(LocaleKeys.setting_about_title.tr(),
-              style: context.textTheme.headline6!.copyWith(fontWeight: FontWeight.w600)),
+              style: context.textTheme.titleLarge!.copyWith(fontWeight: FontWeight.w600)),
           Divider(color: context.colorScheme.onSecondary),
           buildApplicationTourCard(context, viewModel),
           context.emptySizedHeightBoxHigh,
@@ -70,7 +70,7 @@ class SettingsView extends StatelessWidget {
     return Center(
       child: Text(''.version,
           textAlign: TextAlign.center,
-          style: context.textTheme.subtitle1?.copyWith(fontWeight: FontWeight.w200)),
+          style: context.textTheme.titleMedium?.copyWith(fontWeight: FontWeight.w200)),
     );
   }
 

@@ -322,14 +322,12 @@ class LoginView extends StatelessWidget {
                 }
               },
         style: ElevatedButton.styleFrom(
-          shape: const StadiumBorder(),
-          primary: context.colorSchemeLight.blue,
-          onPrimary: context.colors.primaryContainer,
+          foregroundColor: context.colors.primaryContainer, backgroundColor: context.colorSchemeLight.blue, shape: const StadiumBorder(),
         ),
         child: Center(
             child: Text(
           LocaleKeys.login_login.tr(),
-          style: context.textTheme.headline6!.copyWith(color: context.colors.primaryContainer),
+          // style: context.textTheme.headline6!.copyWith(color: context.colors.primaryContainer),
         )),
       );
     });
@@ -348,14 +346,12 @@ class LoginView extends StatelessWidget {
                 }
               },
         style: ElevatedButton.styleFrom(
-          shape: const StadiumBorder(),
-          primary: context.colorSchemeLight.blue,
-          onPrimary: context.colors.primaryContainer,
+          foregroundColor: context.colors.primaryContainer, backgroundColor: context.colorSchemeLight.blue, shape: const StadiumBorder(),
         ),
         child: Center(
             child: Text(
           LocaleKeys.login_signup.tr(),
-          style: context.textTheme.headline6!.copyWith(color: context.colors.primaryContainer),
+          // style: context.textTheme.headline6!.copyWith(color: context.colors.primaryContainer),
         )),
       );
     });

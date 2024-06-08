@@ -23,14 +23,15 @@ class VerifyDialog extends StatelessWidget {
     return Text.rich(TextSpan(children: [
       WidgetSpan(child: Icon(Icons.warning_amber_rounded, color: context.colorSchemeLight.green)),
       TextSpan(
-          text: LocaleKeys.login_alert_title.tr(), style: Theme.of(context).textTheme.bodyText1!)
+          // text: LocaleKeys.login_alert_title.tr(), style: Theme.of(context).textTheme.bodyText1!
+          )
     ]));
   }
 
   Padding buildContentPadding(BuildContext context) {
     return Padding(
       padding: context.paddingLow,
-      child: Text(LocaleKeys.login_alert_desc.tr(), style: Theme.of(context).textTheme.bodyText2!),
+      // child: Text(LocaleKeys.login_alert_desc.tr(), style: Theme.of(context).textTheme.bodyText2!),
     );
   }
 
@@ -43,7 +44,8 @@ class VerifyDialog extends StatelessWidget {
           TextButton(
               onPressed: onPressed,
               child: Text(LocaleKeys.login_alert_button.tr(),
-                  textAlign: TextAlign.center, style: context.textTheme.bodyText2!)),
+                  // textAlign: TextAlign.center, style: context.textTheme.bodyText2!
+                  )),
         ],
       ),
     );

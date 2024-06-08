@@ -29,7 +29,7 @@ abstract class _ForgotPasswordViewModelBase with Store, BaseViewModel {
 
   @override
   void init() {
-    forgotPasswordService = ForgotPasswordService(vexanaManager!.networkManager, scaffoldKey);
+    
     emailController = TextEditingController();
   }
 

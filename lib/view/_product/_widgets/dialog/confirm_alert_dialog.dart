@@ -24,7 +24,8 @@ class ConfirmAlertDialog extends StatelessWidget {
       WidgetSpan(child: Icon(Icons.check_box, color: context.colorSchemeLight.green)),
       TextSpan(
           text: LocaleKeys.changepassword_alert_title.tr(),
-          style: Theme.of(context).textTheme.bodyText1!)
+          // style: Theme.of(context).textTheme.bodyText1!
+          )
     ]));
   }
 
@@ -32,7 +33,8 @@ class ConfirmAlertDialog extends StatelessWidget {
     return Padding(
       padding: context.paddingLow,
       child: Text(LocaleKeys.changepassword_alert_desc.tr(),
-          style: Theme.of(context).textTheme.bodyText2!),
+          // style: Theme.of(context).textTheme.bodyText2!
+          ),
     );
   }
 
@@ -45,7 +47,8 @@ class ConfirmAlertDialog extends StatelessWidget {
           TextButton(
               onPressed: onPressed,
               child: Text(LocaleKeys.changepassword_alert_button.tr(),
-                  textAlign: TextAlign.center, style: context.textTheme.bodyText2!)),
+                  // textAlign: TextAlign.center, style: context.textTheme.bodyText2!
+                  )),
         ],
       ),
     );

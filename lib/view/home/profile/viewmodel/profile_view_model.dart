@@ -58,7 +58,7 @@ abstract class _ProfileViewModelBase with Store, BaseViewModel {
   @override
   void init() {
     helper = DecorationHelper(context: baseContext);
-    profileService = ProfileService(vexanaManager!.networkManager, profileScaffoldKey);
+    // profileService = ProfileService(vexanaManager!.networkManager, profileScaffoldKey);
     passwordController = TextEditingController();
     confirmPasswordController = TextEditingController();
     fullNameController = TextEditingController();

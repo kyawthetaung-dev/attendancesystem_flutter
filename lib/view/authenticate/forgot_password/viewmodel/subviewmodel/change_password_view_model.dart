@@ -28,7 +28,7 @@ abstract class _ChangePasswordViewModelBase with Store, BaseViewModel {
 
   @override
   void init() {
-    forgotPasswordService = ForgotPasswordService(vexanaManager!.networkManager, scaffoldKey);
+    
     passwordController = TextEditingController();
     confirmPasswordController = TextEditingController();
   }

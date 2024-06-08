@@ -42,7 +42,7 @@ class MenuView extends StatelessWidget {
     return ListTile(
         tileColor: context.colorSchemeLight.blue,
         title: Text(LocaleKeys.menu_logout.tr(),
-            style: context.textTheme.bodyText1!.copyWith(color: context.colorSchemeLight.white),
+            style: context.textTheme.bodyLarge!.copyWith(color: context.colorSchemeLight.white),
             textAlign: TextAlign.center),
         onTap: viewModel.logutApp);
   }
@@ -75,7 +75,7 @@ class MenuView extends StatelessWidget {
             ListTile(
                 title: Text(LocaleKeys.menu_welcome.tr(),
                     maxLines: 1,
-                    style: context.textTheme.subtitle2!
+                    style: context.textTheme.titleSmall!
                         .copyWith(color: context.colorSchemeLight.white)),
                 onTap: null,
                 onLongPress: null)

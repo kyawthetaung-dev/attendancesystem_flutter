@@ -112,13 +112,11 @@ class CourseScheduleView extends StatelessWidget {
             viewModel.addCourseSchedule(courseId, typeOfUser);
           },
           style: ElevatedButton.styleFrom(
-            shape: const StadiumBorder(),
-            primary: context.colorSchemeLight.blue,
-            onPrimary: context.colors.primaryContainer,
+            foregroundColor: context.colors.primaryContainer, shape: const StadiumBorder(), backgroundColor: context.colorSchemeLight.blue,
           ),
           child: Center(
               child: Text(LocaleKeys.course_teacher_schedule_button.tr(),
-                  style: context.theme.textTheme.subtitle1!
+                  style: context.theme.textTheme.titleMedium!
                       .copyWith(color: context.colorSchemeLight.white))));
     });
   }
